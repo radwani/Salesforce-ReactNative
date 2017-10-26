@@ -1,0 +1,53 @@
+{
+  "name": "SalesforceReact",
+  "version": "5.3.0",
+  "summary": "Salesforce Mobile SDK for iOS - SalesforceReact",
+  "homepage": "https://github.com/forcedotcom/SalesforceMobileSDK-iOS",
+  "license": {
+    "type": "Salesforce.com Mobile SDK License",
+    "file": "LICENSE.md"
+  },
+  "authors": {
+    "Kevin Hawkins": "khawkins@salesforce.com"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source": {
+    "git": "https://github.com/forcedotcom/SalesforceMobileSDK-iOS.git",
+    "tag": "v5.3.0",
+    "submodules": true
+  },
+  "requires_arc": true,
+  "default_subspecs": "SalesforceReact",
+  "subspecs": [
+    {
+      "name": "SalesforceReact",
+      "dependencies": {
+        "React": [
+
+        ],
+        "SmartSync": [
+
+        ],
+        "SmartStore": [
+
+        ],
+        "SalesforceSDKCore": [
+
+        ]
+      },
+      "source_files": "libs/SalesforceReact/SalesforceReact/Classes/**/*.{h,m}",
+      "public_header_files": [
+        "libs/SalesforceReact/SalesforceReact/Classes/SFNetReactBridge.h",
+        "libs/SalesforceReact/SalesforceReact/Classes/SFOauthReactBridge.h",
+        "libs/SalesforceReact/SalesforceReact/Classes/SFSDKReactLogger.h",
+        "libs/SalesforceReact/SalesforceReact/Classes/SFSmartStoreReactBridge.h",
+        "libs/SalesforceReact/SalesforceReact/Classes/SFSmartSyncReactBridge.h",
+        "libs/SalesforceReact/SalesforceReact/SalesforceReact.h"
+      ],
+      "prefix_header_contents": "#import \"SFSDKReactLogger.h\"",
+      "requires_arc": true
+    }
+  ]
+}
